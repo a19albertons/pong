@@ -32,6 +32,19 @@ public class GameManager : MonoBehaviour
         {
             Application.Quit();
         }
+        // Comprobamos quien ha ganado. El primero en llegar a 9 puntos.
+        if (p1Score == 9)
+        {
+            pelota.SetActive(false);
+            txtReglas.text = "¡Ha ganado la pala derecha!";
+            txtReglas.gameObject.SetActive(true);
+        }
+        if (p2Score == 9)
+        {
+            pelota.SetActive(false);
+            txtReglas.text = "¡Ha ganado la pala izquierda!";
+            txtReglas.gameObject.SetActive(true);
+        }
     }
 
     public void AddPointP1()
