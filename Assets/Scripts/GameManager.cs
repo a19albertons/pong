@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] TMP_Text txtP1Score;
     [SerializeField] TMP_Text txtP2Score;
+    [SerializeField] TMP_Text txtReglas;
     [SerializeField] GameObject pelota;
 
     void Start()
@@ -24,6 +25,8 @@ public class GameManager : MonoBehaviour
             pelota.SetActive(true);
             // Indicamos que el juego ha comenzado
             running = true;
+            // Ocultamos las reglas
+            txtReglas.gameObject.SetActive(false);
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
