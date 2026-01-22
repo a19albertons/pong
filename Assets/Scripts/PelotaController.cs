@@ -7,6 +7,10 @@ public class PelotaController : MonoBehaviour
     [SerializeField] float force;
     [SerializeField] float delay;
     [SerializeField] GameManager gameManager;
+    [SerializeField] AudioClip sfxPaddel;  // Sonido al chocar con la pala
+    [SerializeField] AudioClip sfxWall;    // Sonido al chocar con una pared
+    [SerializeField] AudioClip sfxFail;    // Sonido al salir por la pared inferior
+        AudioSource sfx;  // Componente AudioSource
 
     const float MIN_ANG = 25.0f;
     const float MAX_ANG = 40.0f;
@@ -18,6 +22,7 @@ public class PelotaController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        sfx = GetComponent<AudioSource>();
         int direccionX = Random.Range(0, 2) == 0 ? -1 : 1; // El límite superior es exclusivo (el 2 quedaría fuera).
         StartCoroutine(LanzarPelota(direccionX));
     }
@@ -54,6 +59,9 @@ public class PelotaController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("Gol en " + other.tag + "!!");
+        // Salta el sonido de fail
+        sfx.clip = sfxFail;
+        sfx.Play();
 
         if (other.tag == "PorteriaIzquierda")
         {
@@ -66,6 +74,25 @@ public class PelotaController : MonoBehaviour
             // Lanzaremos la pelota hacia la izquierda
             gameManager.AddPointP2();
             StartCoroutine(LanzarPelota(-1));
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        string tag = other.gameObject.tag;
+
+        if (tag == "Pala1" || tag == "Pala2")
+        {
+            // Salta el sonido de pala
+            sfx.clip = sfxPaddel;
+            sfx.Play();
+        }
+
+        if (tag == "LimiteSuperior" || tag == "LimiteInferior")
+        {
+            // Salta el sonido de pared
+            sfx.clip = sfxWall;
+            sfx.Play();
         }
     }
 }
