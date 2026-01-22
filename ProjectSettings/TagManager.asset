@@ -8,6 +8,8 @@ TagManager:
   - Pala2
   - PorteriaDerecha
   - PorteriaIzquierda
+  - LimiteSuperior
+  - LimiteInferior
   layers:
   - Default
   - TransparentFX
