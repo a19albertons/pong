@@ -28,10 +28,6 @@ public class GameManager : MonoBehaviour
             // Ocultamos las reglas
             txtReglas.gameObject.SetActive(false);
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Application.Quit();
-        }
         // Comprobamos quien ha ganado. El primero en llegar a 9 puntos.
         if (p1Score == 9)
         {
