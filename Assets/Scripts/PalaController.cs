@@ -28,11 +28,13 @@ public class PalaController : MonoBehaviour
         objectivoY = transform.position.y;
     }
 
-/// <summary>
-/// Actualiza la posición del jugador en función del tag y si es el 2 en función de si es humano o no.
-/// </summary>
+    /// <summary>
+    /// Actualiza la posición del jugador en función del tag y si es el 2 en función de si es humano o no.
+    /// </summary>
     void Update()
     {
+        // Se puede añadir un nuevo comprobante donde se mire el estado de la pelota (activa o desactiva) 
+        // para evitar el movimiento antes de que empiece el juego o alternativamente cuando acaba
         if (gameObject.CompareTag("Pala2"))
         {
             if (Settings.instance.getIsPlayer2Human())
@@ -51,28 +53,7 @@ public class PalaController : MonoBehaviour
             }
             else
             {
-                // Mira el tiempo desde el último movimiento
-                tiempoUltimoCalculo += Time.deltaTime;
-                if (tiempoUltimoCalculo >= reactionTime)
-                {
-                    // Calcula un nuevo objetivo con un margen de error y reinicia el tiempo desde el último cálculo
-                    float error = Random.Range(-errorMargin, errorMargin);
-                    objectivoY = rb.position.y + error;
-                    tiempoUltimoCalculo = 0f;
-                }
-
-                // Calcula la distancia actual
-                float distancia = objectivoY - transform.position.y;
-
-                // Aplica el margen de tolerarncia para que la pala no se mueva constantemente
-                if (Mathf.Abs(distancia) > tolerance)
-                {
-                    float newY = Mathf.MoveTowards(transform.position.y, objectivoY, speed * Time.deltaTime);
-
-                    // Bordes de la pantalla
-                    newY = Mathf.Clamp(newY, MIN_Y, MAX_Y);
-                    transform.position = new Vector3(transform.position.x, newY, transform.position.z);
-                }
+                LogicaIA();
             }
 
         }
@@ -89,6 +70,35 @@ public class PalaController : MonoBehaviour
                 // Movimiento hacia abajo
                 transform.Translate(new Vector3(0, -speed * Time.deltaTime, 0));
             }
+        }
+    }
+
+    /// <summary>
+    /// Lógica especifica que se gestiona para la IA del jugador 2
+    /// </summary>
+    private void LogicaIA()
+    {
+        // Mira el tiempo desde el último movimiento
+        tiempoUltimoCalculo += Time.deltaTime;
+        if (tiempoUltimoCalculo >= reactionTime)
+        {
+            // Calcula un nuevo objetivo con un margen de error y reinicia el tiempo desde el último cálculo
+            float error = Random.Range(-errorMargin, errorMargin);
+            objectivoY = rb.position.y + error;
+            tiempoUltimoCalculo = 0f;
+        }
+
+        // Calcula la distancia actual
+        float distancia = objectivoY - transform.position.y;
+
+        // Aplica el margen de tolerarncia para que la pala no se mueva constantemente
+        if (Mathf.Abs(distancia) > tolerance)
+        {
+            float newY = Mathf.MoveTowards(transform.position.y, objectivoY, speed * Time.deltaTime);
+
+            // Bordes de la pantalla
+            newY = Mathf.Clamp(newY, MIN_Y, MAX_Y);
+            transform.position = new Vector3(transform.position.x, newY, transform.position.z);
         }
     }
 }
