@@ -22,7 +22,7 @@ public class Settings : MonoBehaviour
     /// Devuelve si el jugador 2 es humano o no.
     /// </summary>
     /// <returns>Devuelve si el jugador 2 es humano o no</returns>
-    public bool getIsPlayer2Human()
+    public bool GetIsPlayer2Human()
     {
         // Devuelve si el jugador 2 es humano o no.
         return isPlayer2Human;
@@ -41,6 +41,24 @@ public class Settings : MonoBehaviour
         else
         {
             Destroy(gameObject);
+        }
+    }
+
+    public void ChangeIsPlayer2Human()
+    {
+        // Valor a obtener el que exista en PlayerPrefs. Al hacer esto ya se espera un valor preestablecido
+        string isPlayer2HumanActual = PlayerPrefs.GetString("isPlayer2Human", "false"); 
+
+        // Si el valor es true se guarda como false
+        if (isPlayer2HumanActual == "true")
+        {
+            PlayerPrefs.SetString("isPlayer2Human", "false");
+            isPlayer2Human = false;
+        }
+        else
+        {
+            PlayerPrefs.SetString("isPlayer2Human", "true");
+            isPlayer2Human = true;
         }
     }
 }
