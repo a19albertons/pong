@@ -37,7 +37,7 @@ public class PalaController : MonoBehaviour
         // para evitar el movimiento antes de que empiece el juego o alternativamente cuando acaba
         if (gameObject.CompareTag("Pala2"))
         {
-            if (Settings.instance.getIsPlayer2Human())
+            if (Settings.instance.GetIsPlayer2Human())
             {
                 // Si es humano
                 if (Input.GetKey("up") && transform.position.y < MAX_Y)
