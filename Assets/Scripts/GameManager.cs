@@ -19,7 +19,9 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (!running && Input.GetKeyDown(KeyCode.Space))
+        // Se verifica que no esta corriendo, se pulso espacio y que no esta 
+        // en pausa que se caracteriza por una escala de tiempo de 0f
+        if (!running && Input.GetKeyDown(KeyCode.Space) && Time.timeScale != 0f)
         {
             // Activamos la pelota 
             pelota.SetActive(true);
