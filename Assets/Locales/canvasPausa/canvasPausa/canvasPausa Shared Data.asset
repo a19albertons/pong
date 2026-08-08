@@ -24,7 +24,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 616955965440
-    m_Key: New Entry
+    m_Key: Cambiar Player 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 892882448384
+    m_Key: Salir
     m_Metadata:
       m_Items: []
   m_Metadata:

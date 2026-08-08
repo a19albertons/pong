@@ -19,6 +19,14 @@ MonoBehaviour:
     m_Key: reglas y otros
     m_Metadata:
       m_Items: []
+  - m_Id: 4840552984576
+    m_Key: pala derecha gana
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5879867961344
+    m_Key: pala izquierda gana
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

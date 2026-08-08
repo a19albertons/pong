@@ -45,6 +45,14 @@ MonoBehaviour:
       iniciar el juego pulsar tecla espacio'
     m_Metadata:
       m_Items: []
+  - m_Id: 4840552984576
+    m_Localized: "\xA1Ha ganado la pala derecha!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5879867961344
+    m_Localized: "\xA1Ha ganado la pala izquierda!"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

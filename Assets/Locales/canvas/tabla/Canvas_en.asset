@@ -45,6 +45,14 @@ MonoBehaviour:
       start the game, press the space key'
     m_Metadata:
       m_Items: []
+  - m_Id: 4840552984576
+    m_Localized: The right paddle has won!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5879867961344
+    m_Localized: The left paddles has won!
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

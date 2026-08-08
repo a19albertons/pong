@@ -26,6 +26,14 @@ MonoBehaviour:
     m_Localized: Reiniciar
     m_Metadata:
       m_Items: []
+  - m_Id: 616955965440
+    m_Localized: Cambiar Player 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 892882448384
+    m_Localized: Salir
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

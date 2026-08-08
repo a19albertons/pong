@@ -27,6 +27,14 @@ MonoBehaviour:
       iniciar o xogo, premer a tecla de espazo"
     m_Metadata:
       m_Items: []
+  - m_Id: 4840552984576
+    m_Localized: "A pala dereita ga\xF1ou!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5879867961344
+    m_Localized: "A pala esquerda ga\xF1ou!"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
