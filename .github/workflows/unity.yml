@@ -65,6 +65,7 @@ jobs:
                 targetPlatform:
                     - StandaloneLinux64
                     - StandaloneWindows64
+                    - WebGL
         steps:
             # Configura checkout
             - uses: actions/checkout@v4
