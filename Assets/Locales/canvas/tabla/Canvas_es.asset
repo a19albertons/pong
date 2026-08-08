@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Canvas_es
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: 123746722aeb185798dd51233a972425, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 46719365120
+    m_Localized: 'Controles
+
+      - Pala izquierda se controla con w y s
+
+      -
+      Pala derecha se controla con flecha arriba y abajo
+
+      ------------------------------------------------------------
+
+      Reglas
+      de juego
+
+      La pala izquierda debe meter gol en porteria derecha
+
+      La
+      pala derecha debe meter gol en porteria izquierda
+
+      El primero en llegar
+      a los 9 puntos gana
+
+      -------------------------------------------------------------
+
+      Para
+      iniciar el juego pulsar tecla espacio'
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

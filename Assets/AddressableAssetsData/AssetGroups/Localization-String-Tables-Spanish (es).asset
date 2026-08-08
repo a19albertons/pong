@@ -10,32 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Localization-Locales
+  m_Name: Localization-String-Tables-Spanish (es)
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
-  m_GroupName: Localization-Locales
-  m_GUID: ed20a8a47f9a06857a3603f386fdb3fa
+  m_GroupName: Localization-String-Tables-Spanish (es)
+  m_GUID: 9f9848669e8f9976e860b6f4ddca8c46
   m_SerializeEntries:
-  - m_GUID: 5863e55f6910fb30a8820b7ffeb02bed
-    m_Address: Spanish (es)
+  - m_GUID: 6cff0de8b60545518b96ca051fd71f5b
+    m_Address: canvasPausa_es
     m_ReadOnly: 1
     m_SerializedLabels:
-    - Locale
+    - Locale-es
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 5eab29fac224f07c28db6b1d3dfea8e6
-    m_Address: Galician (gl)
+  - m_GUID: 9a5497879f79b32538c00cc6ffdfdb6b
+    m_Address: Canvas_es
     m_ReadOnly: 1
     m_SerializedLabels:
-    - Locale
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 9bb1b013cb83c49abbd315adf670310c
-    m_Address: English (en)
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale
+    - Locale-es
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: ce769f60e4ebc5df59e29291b52fc42a, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: d1cda0bb9067428a8b074b6c53f3d49a, type: 2}
-    - {fileID: 11400000, guid: 19367cdb732c302869e4c300dc5e29cd, type: 2}
+    - {fileID: 11400000, guid: f6024a9740f48b750b991d9d144f3727, type: 2}
+    - {fileID: 11400000, guid: 3fd28a52843a13afea134dd26ff3da81, type: 2}
