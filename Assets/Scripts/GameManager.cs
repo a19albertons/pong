@@ -1,5 +1,7 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Components;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,9 +14,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] TMP_Text txtReglas;
     [SerializeField] GameObject pelota;
 
+    private LocalizeStringEvent txtReglasStringEvent;
+
     void Start()
     {
         Cursor.visible = false;
+        txtReglasStringEvent = txtReglas.GetComponent<LocalizeStringEvent>();
     }
 
     void Update()
@@ -34,13 +39,15 @@ public class GameManager : MonoBehaviour
         if (p1Score == 9)
         {
             pelota.SetActive(false);
-            txtReglas.text = "¡Ha ganado la pala derecha!";
+            txtReglasStringEvent.StringReference.TableEntryReference = "pala derecha gana";
+            txtReglasStringEvent.RefreshString();
             txtReglas.gameObject.SetActive(true);
         }
         if (p2Score == 9)
         {
             pelota.SetActive(false);
-            txtReglas.text = "¡Ha ganado la pala izquierda!";
+            txtReglasStringEvent.StringReference.TableEntryReference = "pala izquierda gana";
+            txtReglasStringEvent.RefreshString();
             txtReglas.gameObject.SetActive(true);
         }
     }
